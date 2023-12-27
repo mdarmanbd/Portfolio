@@ -92,7 +92,7 @@
     }
     .side-Icon:hover{
         background-color: red;
-        width: 100px;
+       
     }
 
 </style>
