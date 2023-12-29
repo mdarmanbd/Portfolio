@@ -26,7 +26,11 @@ const count = ref(0)
                         <div class="w-full text-center sm:text-center md:text-center lg:text-left xl:text-left lg:h-1/2">
                             <!--name & title-->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto lg:text-center xl:text-center py-1 sm:py-1 md:py-1 lg:py-0 xl:py-0">
-                                <h2 class="text-amber text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">i'm arman hossain.</h2>
+                                <h2 class="flex justify-center text-amber text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
+                                    <span class="hidden sm:hidden md:hidden lg:flex xl:flex">
+                                        <img class="mr-1" src="../assets/underLine.svg">
+                                    </span>
+                                    i'm arman hossain.</h2>
                                 <h2 class="text-white font-poppins font-bold text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl uppercase ">web designer</h2>
                             </div>
                             <!--details-->
@@ -39,9 +43,10 @@ const count = ref(0)
                             </div>
                             <!-- button -->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
-                                <div class="  flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
+                                <div class="about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
                                     <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
                                         more about me
+                                        <div class="overlay"></div>
                                     </button>
                                     <div class="">
                                         <img class="w-12 p-1 bg-amber rounded-full " src="../assets/rightArrow.svg">
@@ -63,21 +68,27 @@ const count = ref(0)
                             <div class="w-full lg:h-3/5 lg:flex lg:justify-center">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
-                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-3">
-                                  
-                                    <li class="w-10 bg-amber rounded-full">
+                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5">
+
+                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                        <p class="uppercase font-poppins text-base text-white font-medium ">home</p>
+                                        <img class="p-2 " src="../assets/home.svg">
+                                       
+                                    </li>
+                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                        <p class=" uppercase font-poppins text-base text-white font-medium ">about</p>
                                         <img class="p-2" src="../assets/home.svg">
                                     </li>
-                                    <li class=" w-10 bg-amber rounded-full cursor-pointer">
+                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                        <p class=" uppercase font-poppins text-base text-white font-medium ">portfolio</p>
                                         <img class="p-2" src="../assets/home.svg">
                                     </li>
-                                    <li class="w-10 bg-amber rounded-full">
+                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                        <p class=" uppercase font-poppins text-base text-white font-medium ">contact</p>
                                         <img class="p-2" src="../assets/home.svg">
                                     </li>
-                                    <li class="w-10 bg-amber rounded-full">
-                                        <img class="p-2" src="../assets/home.svg">
-                                    </li>
-                                    <li class="w-10 bg-amber rounded-full">
+                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                        <p class=" uppercase font-poppins text-base text-white font-medium ">blog</p>
                                         <img class="p-2" src="../assets/home.svg">
                                     </li>
                                 </ul>
@@ -136,6 +147,7 @@ const count = ref(0)
 </template>
 
 <style scoped>
+/* fixed color block */
     .color-block{
         background-color: rgb(216, 169, 27);
         position: fixed;
@@ -145,6 +157,73 @@ const count = ref(0)
         left: -87%;
         top: -60%;
     }
+
+/* about button design */
+ .about-button{
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    transition: 0.4s;
+ }
+
+ .about-button:hover{
+    background-color: #ffb400;
+    transform: rotate(3deg);
+    transition: 0.8s; 
+ }
+
+ /* side bare icon design*/
+ 
+.home-icon{
+   display: flex;
+   justify-content: center;
+   width: 250px;
+   background: #111111;
+   position: relative;
+   cursor: pointer;
+   
+}
+
+.home-icon p {
+    width: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    color: #111111;
+    padding: 10px 5px 10px 10px;
+    transition: 0.3s all;
+  
+}
+.home-icon img{
+    width: 40px;
+    background-color: #ffb400;
+    border-radius: 50px;
+    transition: 0.5s all;
+    
+}
+
+.home-icon:hover{
+    transition: 0.5s all;
+}
+.home-icon:hover p{
+    width: 55%;
+    padding: 8px 10px;
+    border-radius: 50px 50px;
+    background-color: #ffb400;
+    color: white;
+    transition: 0.5s all;
+    top: 0;
+    left: 0px;
+    padding-right: 60px;
+
+}
+.home-icon:hover img{
+    z-index: 1;
+}
+
+
 
 /* button style */
 
