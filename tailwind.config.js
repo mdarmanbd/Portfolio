@@ -15,6 +15,7 @@ export default {
         lightBlack:'#2b2a2a',
         deepBlack:'#040404',
         amber:'#ffb400',
+        nero:'#2b2a2a',
 
       }
     },

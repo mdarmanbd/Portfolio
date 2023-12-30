@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import ProfileImg from './ProfileImg.vue';
+import {store} from '../store/store'
+import About from './About.vue';
 import ProfileDetails from './ProfileDetails.vue'
 
 const count = ref(0)
@@ -11,7 +12,12 @@ const count = ref(0)
     <section>
         <div class="w-full bg-dreamlessSleep ">
             <div class=" grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static">
-                <div class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
+                <!---about page-->
+                <div v-if="store.aboutPage" class="col-span-10 ">
+                    <About></About>
+                </div>
+                <!--home page-->
+                <div v-if="store.home" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
                         <div class= "color-block"> </div>
                     </div>
@@ -21,7 +27,7 @@ const count = ref(0)
                         </div>
                     </div>
                 </div>
-                <div class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                <div  v-if="store.home" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 ">
                     <div class="w-11/12 sm:w-11/12 md:w-11/12 lg:w-full xl:w-full mx-auto lg:h-screen lg:grid lg:place-content-center">
                         <div class="w-full text-center sm:text-center md:text-center lg:text-left xl:text-left lg:h-1/2">
                             <!--name & title-->
@@ -48,16 +54,18 @@ const count = ref(0)
                                         more about me
                                         <div class="overlay"></div>
                                     </button>
-                                    <div class="">
+                                    <img class="w-12 p-1 bg-amber rounded-full " src="../assets/rightArrow.svg">
+
+                                    <!-- <div class="">
                                         <img class="w-12 p-1 bg-amber rounded-full " src="../assets/rightArrow.svg">
-                                    </div> 
+                                    </div>  -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
-                    <div class="lg:h-screen">
+                    <div class="lg:h-screen ">
                         <div class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
                             <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
                         </div>
@@ -65,31 +73,31 @@ const count = ref(0)
                  
                         <!----->
                         <div class=" w-full lg:grid lg:place-items-center lg:h-3/4 ">
-                            <div class="w-full lg:h-3/5 lg:flex lg:justify-center">
+                            <div class="w-full lg:w-1/4 lg:mx-auto lg:h-3/5 lg:flex lg:justify-end">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
                                   bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5">
 
-                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li  class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class="uppercase font-poppins text-base text-white font-medium ">home</p>
                                         <img class="p-2 " src="../assets/home.svg">
                                        
                                     </li>
-                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.aboutButton" class="home-icon about rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">about</p>
-                                        <img class="p-2" src="../assets/home.svg">
+                                        <img class="p-2 about" src="../assets/person.svg">
                                     </li>
                                     <li class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">portfolio</p>
-                                        <img class="p-2" src="../assets/home.svg">
+                                        <img class="p-2 about" src="../assets/beg.svg">
                                     </li>
                                     <li class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">contact</p>
-                                        <img class="p-2" src="../assets/home.svg">
+                                        <img class="p-2 about" src="../assets/mail.svg">
                                     </li>
                                     <li class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">blog</p>
-                                        <img class="p-2" src="../assets/home.svg">
+                                        <img class="p-2 about" src="../assets/sms.svg">
                                     </li>
                                 </ul>
                             </div>
@@ -100,9 +108,6 @@ const count = ref(0)
         </div>
 
     </section>
-
-
-
     <!-- <section class="w-full">
         <div class="w-full h-screen bg-dreamlessSleep fixed">
 
@@ -160,40 +165,36 @@ const count = ref(0)
 
 /* about button design */
  .about-button{
-    position: relative;
-    z-index: 1;
-    background-color: transparent;
-    transition: 0.4s;
+     cursor: pointer;  
  }
 
- .about-button:hover{
-    background-color: #ffb400;
-    transform: rotate(3deg);
-    transition: 0.8s; 
- }
 
  /* side bare icon design*/
  
 .home-icon{
    display: flex;
-   justify-content: center;
-   width: 250px;
+   justify-content: end;
+   width:160px;
    background: #111111;
    position: relative;
    cursor: pointer;
+   
    
 }
 
 .home-icon p {
     width: 50%;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
     position: absolute;
     top: 0;
-    left: 150px;
+    left: 100px;
     color: #111111;
     padding: 10px 5px 10px 10px;
     transition: 0.3s all;
+    letter-spacing: 2px;
+    z-index: -1;
   
 }
 .home-icon img{
@@ -203,12 +204,17 @@ const count = ref(0)
     transition: 0.5s all;
     
 }
+.home-icon .about{
+    background-color: #2b2a2a !important;
+}
+
 
 .home-icon:hover{
     transition: 0.5s all;
+     /* width: 240px;  */
 }
 .home-icon:hover p{
-    width: 55%;
+    width: 100%;
     padding: 8px 10px;
     border-radius: 50px 50px;
     background-color: #ffb400;
@@ -217,12 +223,16 @@ const count = ref(0)
     top: 0;
     left: 0px;
     padding-right: 60px;
+    z-index: 1;
 
 }
+
 .home-icon:hover img{
     z-index: 1;
 }
-
+.home-icon:hover .about{
+    background-color: #ffb400 !important;
+}
 
 
 /* button style */

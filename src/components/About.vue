@@ -7,7 +7,7 @@
     
     <div class="">
         
-            <img class="pt-8 w-full" src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
+          <p class="text-white p-10 text-xl">this is about page</p>
         
     </div>
 </template>
