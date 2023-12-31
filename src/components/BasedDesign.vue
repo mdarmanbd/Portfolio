@@ -2,7 +2,10 @@
 import { ref } from 'vue'
 import {store} from '../store/store'
 import About from './About.vue';
-import ProfileDetails from './ProfileDetails.vue'
+import portfolio from './Portfolio.vue';
+import ContactPage from './Contact.vue'
+import Blog from './Blog.vue'
+
 
 const count = ref(0)
 
@@ -13,8 +16,20 @@ const count = ref(0)
         <div class="w-full bg-dreamlessSleep ">
             <div class=" grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static">
                 <!---about page-->
-                <div v-if="store.aboutPage" class="col-span-10 ">
+                <div v-if="store.aboutPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
                     <About></About>
+                </div>
+                <!--portfolio page-->
+                <div v-if="store.portfolioPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                   <portfolio></portfolio>
+                </div>
+                <!---contact page-->
+                <div v-if="store.contactPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                   <ContactPage></ContactPage>
+                </div>
+                <!--blog page-->
+                <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                   <Blog></Blog>
                 </div>
                 <!--home page-->
                 <div v-if="store.home" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
@@ -54,11 +69,8 @@ const count = ref(0)
                                         more about me
                                         <div class="overlay"></div>
                                     </button>
+                                    <!--button img icon-->
                                     <img class="w-12 p-1 bg-amber rounded-full " src="../assets/rightArrow.svg">
-
-                                    <!-- <div class="">
-                                        <img class="w-12 p-1 bg-amber rounded-full " src="../assets/rightArrow.svg">
-                                    </div>  -->
                                 </div>
                             </div>
                         </div>
@@ -69,16 +81,15 @@ const count = ref(0)
                         <div class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
                             <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
                         </div>
-                        <!----->
-                 
-                        <!----->
+                     
+                        <!--side nav bar--->
                         <div class=" w-full lg:grid lg:place-items-center lg:h-3/4 ">
                             <div class="w-full lg:w-1/4 lg:mx-auto lg:h-3/5 lg:flex lg:justify-end">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
                                   bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5">
 
-                                    <li  class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.homeButton" class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class="uppercase font-poppins text-base text-white font-medium ">home</p>
                                         <img class="p-2 " src="../assets/home.svg">
                                        
@@ -87,15 +98,15 @@ const count = ref(0)
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">about</p>
                                         <img class="p-2 about" src="../assets/person.svg">
                                     </li>
-                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.portfolioButton" class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">portfolio</p>
                                         <img class="p-2 about" src="../assets/beg.svg">
                                     </li>
-                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.contactButton" class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">contact</p>
                                         <img class="p-2 about" src="../assets/mail.svg">
                                     </li>
-                                    <li class="home-icon  bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.blogButton" class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class=" uppercase font-poppins text-base text-white font-medium ">blog</p>
                                         <img class="p-2 about" src="../assets/sms.svg">
                                     </li>
@@ -165,8 +176,37 @@ const count = ref(0)
 
 /* about button design */
  .about-button{
-     cursor: pointer;  
+     cursor: pointer;
+     /* background-color: red; */
+     position: relative;
+     overflow: hidden;
  }
+ .about-button button .overlay{
+   position: absolute;
+    border-radius: 50px 50px;
+    top: 0;
+    left: 200px;
+    height: 48px;
+    width: 50px;
+    background-color: #ffb400;
+    opacity: 0.1;
+    transition: 0.4s all;
+    z-index: -1;
+    
+}
+
+.about-button:hover .overlay{
+    left: 0;
+    transition: 0.4s all;
+    width: 100%;
+    z-index: 1;
+   
+}
+.about-button:hover button{
+    opacity: 1000;
+    
+}
+
 
 
  /* side bare icon design*/
