@@ -14,7 +14,7 @@ const count = ref(0)
 <template>
     <section>
         <div class="w-full bg-dreamlessSleep ">
-            <div class=" grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static">
+            <div class=" grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static ">
                 <!---about page-->
                 <div v-if="store.aboutPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
                     <About></About>
@@ -119,45 +119,7 @@ const count = ref(0)
         </div>
 
     </section>
-    <!-- <section class="w-full">
-        <div class="w-full h-screen bg-dreamlessSleep fixed">
 
-            <ul class="absolute sm:absolute md:absolute lg:static xl:static w-full sm:w-full md:w-full lg:w-fit xl:w-fit bottom-0 lg:space-y-5 xl:space-y-5
-                                 bg-gray-800 sm:bg-gray-800 md:bg-gray-800 lg:bg-dreamlessSleep xl:bg-dreamlessSleep flex sm:flex md:flex lg:block xl:block
-                                 justify-around sm:justify-around md:justify-around lg:justify-center xl:justify-cente py-3 sm:py-3 md:py-3 lg:py-0 xl:py-0">
-
-            </ul>
-            <div class="w-full">
-                
-                <div class= "color-block" ></div>
-               
-                <div class="w-11/12 mx-auto">
-                    <div class="w-full flex">
-                        <div class="fixed top-20 bg-deepBlack rounded-lg h-4/5 w-1/4">
-                            <ProfileImg/>
-                        </div>
-                        <div class="relative w-full ">
-                            <ProfileDetails/>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                
-            </div>
-           
-          
-            <div class="w-11/12 mx-auto">
-                
-                <div class="w-full flex justify-end pt-10">
-                    <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
-                </div>
-                
-            </div>
-            
-            
-        </div>
-    </section> -->
   
 
 </template>
@@ -178,6 +140,7 @@ const count = ref(0)
  .about-button{
      cursor: pointer;
      /* background-color: red; */
+     background-color: transparent;
      position: relative;
      overflow: hidden;
  }
