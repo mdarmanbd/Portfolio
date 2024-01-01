@@ -14,17 +14,17 @@ const count = ref(0)
 <template>
     <section>
         <div class="w-full bg-dreamlessSleep ">
-            <div class=" grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static ">
+            <div class="w-full grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static ">
                 <!---about page-->
-                <div v-if="store.aboutPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                <div v-if="store.aboutPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                     <About></About>
                 </div>
                 <!--portfolio page-->
-                <div v-if="store.portfolioPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                <div v-if="store.portfolioPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                    <portfolio></portfolio>
                 </div>
                 <!---contact page-->
-                <div v-if="store.contactPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                <div v-if="store.contactPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                    <ContactPage></ContactPage>
                 </div>
                 <!--blog page-->

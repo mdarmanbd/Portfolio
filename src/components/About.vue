@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <section class="w-full">
+    <section class="w-full h-screen overflow-y-auto">
         <!--heading section-->
         <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 m-auto relative py-20">
             <h1 class="text-amber text-center font-poppins font-extrabold text-6xl opacity-5 uppercase tracking-widest">Resume</h1>
@@ -14,15 +14,17 @@
         </div>
         <!----->
         <div class="w-full">
-            <div class="w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/5 m-auto px-5">
+            <div class="w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/5 m-auto px-3 lg:px-5">
                 <h2 class="uppercase text-white font-poppins text-xl pb-5 font-semibold">personal infos</h2>
+                <!---responsive img-->
                 <div class="grid sm:grid md:grid lg:hidden xl:hidden grid-cols-12">
                     <div class="w-full col-span-12 pb-5">
-                       <div class="w-32 mx-auto  bg-amber rounded-full">
-                            <img class="w-32 h-auto rounded-full shadow-xl  " src="../assets/arman-removebg-jpg.png">
+                       <div class="w-32 mx-auto bg-deepBlack rounded-full border-2 border-gray-700">
+                            <img class="w-32 h-auto rounded-full shadow-xl" src="../assets/arman-removebg-jpg.png">
                        </div>
                     </div>
                 </div>
+                <!--details-->
                 <div class="grid grid-cols-12 ">
                     <div class="col-span-6 sm:col-span-6 md:col-span-6 lg:col-span-6">
                         <div class="space-y-2 pb-5 px-3 sm:px-3 md:px-3 lg:px-0 xl:px-0">
@@ -42,8 +44,6 @@
                                 <span class="text-base sm:text-base md:text-base lg:text-lg xl:text-lg font-medium text-white">Example@.com</span>
                             </P>
                         </div>
-                       
-                        
                     </div>
                     <div class="col-span-6 sm:col-span-6 md:col-span-6 lg:col-span-6 w-full">
                         <div class="w-full space-y-2 px-4 sm:px-4 md:px-4 lg:px-0 xl:px-0">
@@ -57,26 +57,30 @@
                                 <span class="text-base sm:text-base md:text-base lg:text-lg xl:text-lg font-medium text-white">Dhaka</span>
                             </P>
                             <P class="text-gray-400 font-poppins text-sm sm:text-sm md:text-sm lg:text-base xl:text-base font-normal">Email:
-                                <span class="text-sm sm:text-sm md:text-base lg:text-lg xl:text-lg font-medium text-white">md.armantext@gmail.com</span>
+                                <span class="text-sm sm:text-sm md:text-base lg:text-lg xl:text-lg font-medium text-white">Example@gmail.com</span>
                             </P>
                             <P class="text-gray-400 font-poppins text-sm sm:text-sm md:text-sm lg:text-base xl:text-base font-normal">Langages:
                                 <span class="text-base sm:text-base md:text-base lg:text-lg xl:text-lgfont-medium text-white">Bangla,English</span>
                             </P>
                         </div>
+                        
                     </div>
                 </div>
                 <!------>
-                <div class="w-full pt-3">
-                    <div class="about-button flex justify-between gap-3 w-56 sm:w-56 md:w-56 lg:w-64 xl:w-60 border border-amber rounded-full">
-                        <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
-                                DOWNLOAD CV
-                            <div class="overlay"></div>
-                        </button>
-                        <!--button img icon-->
-                        <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
+                <div class="w-full pb-14 sm:pb-14 md:pb-0 lg:pb-0 xl:pb-0">
+                    <div class="w-full pb-5">
+                        <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
+                            <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
+                                <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
+                                    DOWNLOAD CV
+                                    <div class="overlay"></div>
+                                </button>
+                                <!--button img icon-->
+                                <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
         
