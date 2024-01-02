@@ -9,6 +9,7 @@ export default {
       fontFamily:{
         'poppins':['Poppins'],
         'montserrat':['Montserrat'],
+        'open':['Open+Sans'],
       },
       colors:{
         dreamlessSleep:'#111111',
@@ -16,7 +17,12 @@ export default {
         deepBlack:'#040404',
         amber:'#ffb400',
         nero:'#2b2a2a',
+        eerieBlack: '#252525',
+        lavenderGray: '#edeff6',
 
+      },
+      zIndex:{
+        zIndex_1000:'1000',
       }
     },
   },

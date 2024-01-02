@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import {store} from '../store/store'
+import { project } from '../store/project';
 import About from './About.vue';
 import portfolio from './Portfolio.vue';
 import ContactPage from './Contact.vue'
@@ -13,8 +14,8 @@ const count = ref(0)
 
 <template>
     <section>
-        <div class="w-full bg-dreamlessSleep ">
-            <div class="w-full grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static ">
+        <div class=" w-full bg-dreamlessSleep ">
+            <div class="w-full grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static" >
                 <!---about page-->
                 <div v-if="store.aboutPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                     <About></About>
@@ -76,22 +77,22 @@ const count = ref(0)
                         </div>
                     </div>
                 </div>
-                <div class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
+                <div :class="[project.isActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
                     <div class="lg:h-screen ">
                         <div class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
                             <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
                         </div>
                      
                         <!--side nav bar--->
-                        <div class=" w-full lg:grid lg:place-items-center lg:h-3/4 ">
+                        <div class=" w-full lg:grid lg:place-items-center lg:h-3/4">
                             <div class="w-full lg:w-1/4 lg:mx-auto lg:h-3/5 lg:flex lg:justify-end">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
-                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5">
+                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5 ">
 
                                     <li @click="store.homeButton" class="home-icon  bg-amber rounded-full overflow-hidden">
                                         <p class="uppercase font-poppins text-base text-white font-medium ">home</p>
-                                        <img class="p-2 " src="../assets/home.svg">
+                                        <img class="p-2" src="../assets/home.svg">
                                        
                                     </li>
                                     <li @click="store.aboutButton" class="home-icon about rounded-full overflow-hidden">
