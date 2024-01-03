@@ -15,7 +15,7 @@ import {project} from '../store/project'
                     </div>
                     <!--project title-->
                     <div class="pt-2 pb-5">
-                        <h3 class="text-amber font-bold text-3xl text-center uppercase font-poppins">mockup project</h3>
+                        <h3 class="text-amber font-bold text-3xl text-center uppercase font-poppins">facebook project</h3>
                     </div>
                      <!--project details-->
                     <div class="w-11/12 mx-auto block sm:block md:block lg:flex xl:flex justify-between gap-2 pb-5">
@@ -23,12 +23,12 @@ import {project} from '../store/project'
                             <div class="flex space-x-2">
                                 <img src="../assets/project.svg">
                                 <p class="text-lavenderGray font-open text-base font-medium">Project : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">Website</p>
+                                <p class="text-lavenderGray font-open text-base font-semibold">Shoot</p>
                             </div>
                             <div class="flex space-x-2">
                                 <img src="../assets/code.svg">
                                 <p class="text-lavenderGray font-open text-base font-medium">Langages : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">HTML,CSS,Javascript</p>
+                                <p class="text-lavenderGray font-open text-base font-semibold">Bootstrap</p>
                             </div>
                            
                         </div>
@@ -36,13 +36,13 @@ import {project} from '../store/project'
                             <div class="flex space-x-2">
                                 <img src="../assets/client.svg">
                                 <p class="text-lavenderGray font-open text-base font-medium">Client : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">Envato</p>
+                                <p class="text-lavenderGray font-open text-base font-semibold">Facebook</p>
                             </div>
                             <div class="flex space-x-2">
                                 <img src="../assets/link.svg">
                                 <p class="text-lavenderGray font-open text-base font-medium">Preview : </p>
                                 <p class="text-lavenderGray font-open text-base font-semibold">
-                                    <a class="underline text-amber" href="www.facebook.com" target="_blank">www.arman.com</a>
+                                    <a class="underline text-amber" href="www.facebook.com" target="blank">www.arman.com</a>
                                 </p>
                             </div>
                         </div>
@@ -50,7 +50,7 @@ import {project} from '../store/project'
                     <!--project img-->
                     <div class="w-full pb-2 sm:pb-2 md:pb-2 lg:pb-5 xl:pb-5">
                         <div class="w-11/12 mx-auto h-80 overflow-hidden">
-                            <img class="w-full " src="../assets/project_1.jpg">
+                            <img class="w-full " src="../assets/project-8.jpg">
                         </div>
                     </div>
                 </div>
@@ -60,8 +60,6 @@ import {project} from '../store/project'
 </template>
 
 <style scoped>
-/* .z-index-1000{
-    z-index: 1000;
-} */
+
 
 </style>

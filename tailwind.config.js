@@ -23,6 +23,9 @@ export default {
       },
       zIndex:{
         zIndex_1000:'1000',
+      },
+      width:{
+        95:'95%'
       }
     },
   },

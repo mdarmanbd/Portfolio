@@ -77,7 +77,7 @@ const count = ref(0)
                         </div>
                     </div>
                 </div>
-                <div :class="[project.isActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
+                <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
                     <div class="lg:h-screen ">
                         <div class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
                             <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
@@ -90,25 +90,24 @@ const count = ref(0)
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
                                   bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5 ">
 
-                                    <li @click="store.homeButton" class="home-icon  bg-amber rounded-full overflow-hidden">
-                                        <p class="uppercase font-poppins text-base text-white font-medium ">home</p>
+                                    <li @click="store.homeButton" class="home-icon bg-amber rounded-full overflow-hidden">
+                                        <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">home</p>
                                         <img class="p-2" src="../assets/home.svg">
-                                       
                                     </li>
-                                    <li @click="store.aboutButton" class="home-icon about rounded-full overflow-hidden">
-                                        <p class=" uppercase font-poppins text-base text-white font-medium ">about</p>
+                                    <li @click="store.aboutButton" class="home-icon about bg-gray-600 rounded-full overflow-hidden">
+                                        <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">about</p>
                                         <img class="p-2 about" src="../assets/person.svg">
                                     </li>
-                                    <li @click="store.portfolioButton" class="home-icon  bg-amber rounded-full overflow-hidden">
-                                        <p class=" uppercase font-poppins text-base text-white font-medium ">portfolio</p>
+                                    <li @click="store.portfolioButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                        <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">portfolio</p>
                                         <img class="p-2 about" src="../assets/beg.svg">
                                     </li>
-                                    <li @click="store.contactButton" class="home-icon  bg-amber rounded-full overflow-hidden">
-                                        <p class=" uppercase font-poppins text-base text-white font-medium ">contact</p>
+                                    <li @click="store.contactButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                        <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">contact</p>
                                         <img class="p-2 about" src="../assets/mail.svg">
                                     </li>
-                                    <li @click="store.blogButton" class="home-icon  bg-amber rounded-full overflow-hidden">
-                                        <p class=" uppercase font-poppins text-base text-white font-medium ">blog</p>
+                                    <li @click="store.blogButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                        <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">blog</p>
                                         <img class="p-2 about" src="../assets/sms.svg">
                                     </li>
                                 </ul>
@@ -118,10 +117,7 @@ const count = ref(0)
                 </div>
             </div>
         </div>
-
     </section>
-
-  
 
 </template>
 
@@ -171,74 +167,6 @@ const count = ref(0)
     
 }
 
-
-
- /* side bare icon design*/
- 
-.home-icon{
-   display: flex;
-   justify-content: end;
-   width:160px;
-   background: #111111;
-   position: relative;
-   cursor: pointer;
-   
-   
-}
-
-.home-icon p {
-    width: 50%;
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 100px;
-    color: #111111;
-    padding: 10px 5px 10px 10px;
-    transition: 0.3s all;
-    letter-spacing: 2px;
-    z-index: -1;
-  
-}
-.home-icon img{
-    width: 40px;
-    background-color: #ffb400;
-    border-radius: 50px;
-    transition: 0.5s all;
-    
-}
-.home-icon .about{
-    background-color: #2b2a2a !important;
-}
-
-
-.home-icon:hover{
-    transition: 0.5s all;
-     /* width: 240px;  */
-}
-.home-icon:hover p{
-    width: 100%;
-    padding: 8px 10px;
-    border-radius: 50px 50px;
-    background-color: #ffb400;
-    color: white;
-    transition: 0.5s all;
-    top: 0;
-    left: 0px;
-    padding-right: 60px;
-    z-index: 1;
-
-}
-
-.home-icon:hover img{
-    z-index: 1;
-}
-.home-icon:hover .about{
-    background-color: #ffb400 !important;
-}
-
-
 /* button style */
 
     .more-Button{
@@ -266,4 +194,71 @@ const count = ref(0)
     .more-Button1:hover::before{
         transform: scaleX(1);
     }
+
+/* resposive side bar design for lg to xl and avobe */
+
+    @media (min-width: 1024px) {
+        .home-icon{
+            display: flex;
+            justify-content: end;
+            width:160px;
+            background: #111111;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .home-icon p {
+            width: 50%;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: 400;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            color: #111111;
+            padding: 10px 5px 10px 10px;
+            transition: 0.3s all;
+            letter-spacing: 2px;
+            z-index: -1;
+  
+        }
+        .home-icon img{
+            width: 40px;
+            background-color: #ffb400;
+            border-radius: 50px;
+            transition: 0.5s all;
+    
+        }
+        .home-icon .about{
+            background-color: #2b2a2a !important;
+        }
+        .home-icon:hover{
+            transition: 0.5s all;
+            /* width: 240px;  */
+        }
+        .home-icon:hover p{
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 50px 50px;
+            background-color: #ffb400;
+            color: white;
+            transition: 0.5s all;
+            top: 0;
+            left: 0px;
+            padding-right: 60px;
+            z-index: 1;
+
+        }
+
+        .home-icon:hover img{
+            z-index: 1;
+        }
+        .home-icon:hover .about{
+            background-color: #ffb400 !important;
+        }
+    }
+
+
+
+
 </style>
