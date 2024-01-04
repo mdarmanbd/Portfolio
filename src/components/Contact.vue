@@ -1,4 +1,5 @@
 <script setup>
+import ContactFrom from './ContactFrom.vue';
 
 </script>
 
@@ -42,7 +43,7 @@
                   </div>
                 </div>
 
-                <div class="flex space-x-0 pb-5">
+                <div class="flex space-x-0 pb-10">
                   <div class="w-12">
                     <img src="../assets/phone.svg">
                   </div>
@@ -54,23 +55,35 @@
               <!---social icon-->  
                 <div class="flex space-x-3 w-full">
                   <div class="w-10">
-                    <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/facebook.svg">
+                    <a href="#">
+                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/facebook.svg">
+                    </a>
                   </div>
                   <div class="w-10">
-                    <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/twitter.svg">
+                    <a href="#">
+                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/twitter.svg">
+                    </a>
                   </div>
                   <div class="w-10">
-                    <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/youtub.svg">
+                    <a href="#">
+                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/youtub.svg">
+                    </a>
                   </div>
                   <div class="w-10">
-                    <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/web.svg">
+                    <a href="#">
+                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/web.svg">
+                    </a>
                   </div>
                 </div>
-
               </div>
             </div>
-            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8 bg-green-600">
-              <p class="text-white">col-span-6</p>
+          <!---contact from--->
+            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8 ">
+              <div class="ml-0 sm:ml-0 lg:mx-10 xl:mx-0 xl:ml-10 pt-10 sm:pt-10 md:pt-10 lg:pt-0 xl:pt-0">
+                <div class="w-full">
+                  <ContactFrom></ContactFrom>
+                </div>
+              </div>
             </div>
           </div>
         </div>

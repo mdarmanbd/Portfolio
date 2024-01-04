@@ -201,6 +201,7 @@ const count = ref(0)
         .home-icon{
             display: flex;
             justify-content: end;
+            /* justify-content: end; */
             width:160px;
             background: #111111;
             position: relative;
