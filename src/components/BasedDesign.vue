@@ -37,9 +37,25 @@ const count = ref(0)
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
                         <div class= "color-block"> </div>
                     </div>
-                    <div class="py-10 sm:py-10 md:py-10 lg:py-0 xl:py-0 lg:relative w-full sm:w-full md:w-full lg:w-11/12 xl:w-11/12 mx-auto lg:h-screen xl:h-screen lg:grid xl:grid lg:place-items-center xl:place-items-center">
+                   <!---responsive img---> 
+                    <div class="grid sm:grid md:grid lg:hidden xl:hidden grid-cols-12">
+                        <div class="w-full col-span-12 pb-5 pt-[20%] sm:pt-[30%] md:pt-[30%]">
+                            <div class="w-52 sm:w-52 md:w-72 mx-auto bg-deepBlack rounded-full border-2 border-gray-700">
+                                <img class="w-full h-auto rounded-full shadow-xl" src="../assets/arman-removebg-jpg.png">
+                            </div>
+                        </div>
+                    </div>
+                   <!---big screen img--> 
+
+                    <!-- <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-10 sm:py-10 md:py-10 lg:py-0 xl:py-0 lg:relative w-full sm:w-full md:w-full lg:w-11/12 xl:w-11/12 mx-auto lg:h-screen xl:h-screen  lg:place-items-center xl:place-items-center">
                         <div class="w-3/5 sm:w-3/5 md:w-3/5 lg:w-full xl:w-full rounded-full sm:rounded-full md:rounded-full lg:rounded-lg xl:rounded-lg  mx-auto block sm:block md:block lg:absolute bg-deepBlack lg:h-3/4 xl:h-3/4 shadow-xl">
                             <img class="w-full  " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
+                        </div>
+                    </div> -->
+                    
+                    <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-aut  h-screen place-items-center">
+                        <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[68%] shadow-xl bg-deepBlack mx-auto left-5">
+                            <img class="w-full lg:h-full xl:h-auto absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
                         </div>
                     </div>
                 </div>
@@ -84,8 +100,8 @@ const count = ref(0)
                         </div>
                      
                         <!--side nav bar--->
-                        <div class=" w-full lg:grid lg:place-items-center lg:h-3/4">
-                            <div class="w-full lg:w-1/4 lg:mx-auto lg:h-3/5 lg:flex lg:justify-end">
+                        <div class=" w-full lg:grid lg:place-items-center lg:h-[75%] xl:h-3/4">
+                            <div class="w-full lg:w-1/4 lg:mx-auto lg:h-[-70%] xl:h-3/5 lg:flex lg:justify-end">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
                                   bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5 ">
