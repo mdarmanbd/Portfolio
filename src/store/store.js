@@ -2,11 +2,24 @@ import{reactive} from 'vue'
 
 
 const store = reactive({
+    aboutMePage:false,
+    opacityActiveHomePage:false,
     home: true,
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
     blogPage:false,
+
+    aboutMeButton(){
+        this.aboutMePage = true
+        this.opacityActiveHomePage = true
+    },
+
+    aboutMeCloseButton(){
+        this.aboutMePage = false
+        this.opacityActiveHomePage = false
+    },
+
     homeButton(){
         this.home = true
         this.aboutPage = false

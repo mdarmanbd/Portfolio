@@ -5,18 +5,93 @@
 
 <template>
     <section class="w-full h-screen overflow-y-auto">
-        <!--heading section-->
+        
+        <!---title--->
         <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 m-auto relative py-20">
             <h1 class="text-amber text-center font-poppins font-extrabold text-6xl opacity-5 uppercase tracking-widest">Resume</h1>
             <div class="absolute top-3 w-full py-20">
                 <p class="text-center text-amber font-poppins font-extrabold text-4xl uppercase">about me</p>
             </div>
         </div>
+
+     <!---- plz add the responsive view--->
+
+
+
         <!----->
-        <div class="w-full">
+
+
+        <div class="hidden sm:hidden md:hidden lg:block xl:block w-1/2 m-auto ">
+            <h3 class="uppercase text-xl font-poppins font-semibold text-white pb-5">personal infos</h3>
+            <div class="w-full block sm:block md:block lg:flex xl:flex justify-between gap-2 pb-5">
+                <!---left side---> 
+                <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">first name : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">arman</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">age : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">29 years</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">freelance : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">available</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">phone : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">01682650196</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">facebook </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">example@.com</p>
+                    </div>
+                </div>
+                          <!---right side-->  
+                <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">last name : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">hossain</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">nationlity : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">bangladeshi</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">address : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">dhaka</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">email : </p>
+                        <p class="lowercase font-open font-semibold text-base text-white ">md.armantext@gmail.com</p>
+                    </div>
+                    <div class="flex space-x-3 pb-4">
+                        <p class="capitalize font-open text-base font-medium text-white opacity-85">langages : </p>
+                        <p class="capitalize font-open font-semibold text-base text-white ">bangla , english</p>
+                    </div>
+                </div>
+            </div>
+        <!---download cv button -->
+            <div class="w-full pb-14 sm:pb-14 md:pb-0 lg:pb-10 xl:pb-10">
+                <div class="w-full ">
+                    <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
+                        <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
+                             <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
+                                DOWNLOAD CV
+                                <div class="overlay"></div>
+                            </button>
+                        <!--button img icon-->
+                            <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="w-full">
             <div class="w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/5 m-auto px-3 lg:px-5">
                 <h2 class="uppercase text-white font-poppins text-xl pb-5 font-semibold">personal infos</h2>
-                <!---responsive img-->
+                
                 <div class="grid sm:grid md:grid lg:hidden xl:hidden grid-cols-12">
                     <div class="w-full col-span-12 pb-5">
                        <div class="w-32 mx-auto bg-deepBlack rounded-full border-2 border-gray-700">
@@ -24,7 +99,7 @@
                        </div>
                     </div>
                 </div>
-                <!--details-->
+                
                 <div class="grid grid-cols-12 ">
                     <div class="col-span-6 sm:col-span-6 md:col-span-6 lg:col-span-6">
                         <div class="space-y-2 pb-5 px-3 sm:px-3 md:px-3 lg:px-0 xl:px-0">
@@ -66,7 +141,7 @@
                         
                     </div>
                 </div>
-                <!------>
+                
                 <div class="w-full pb-14 sm:pb-14 md:pb-0 lg:pb-0 xl:pb-0">
                     <div class="w-full pb-5">
                         <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
@@ -75,14 +150,14 @@
                                     DOWNLOAD CV
                                     <div class="overlay"></div>
                                 </button>
-                                <!--button img icon-->
+                                
                                 <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         
     </section>

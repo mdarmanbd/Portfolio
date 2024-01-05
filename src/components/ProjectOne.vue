@@ -60,8 +60,6 @@ import {project} from '../store/project'
 </template>
 
 <style scoped>
-/* .z-index-1000{
-    z-index: 1000;
-} */
+
 
 </style>

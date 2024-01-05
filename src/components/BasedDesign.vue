@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import {store} from '../store/store'
 import { project } from '../store/project';
+import AboutMe from './AboutMe.vue';
 import About from './About.vue';
 import portfolio from './Portfolio.vue';
 import ContactPage from './Contact.vue'
@@ -16,6 +17,10 @@ const count = ref(0)
     <section>
         <div class=" w-full bg-dreamlessSleep ">
             <div class="w-full grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static" >
+                <!---about me button--->
+                <div v-if="store.aboutMePage" class="col-span-10">
+                    <AboutMe></AboutMe>
+                </div>
                 <!---about page-->
                 <div v-if="store.aboutPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                     <About></About>
@@ -33,7 +38,7 @@ const count = ref(0)
                    <Blog></Blog>
                 </div>
                 <!--home page-->
-                <div v-if="store.home" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
+                <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
                         <div class= "color-block"> </div>
                     </div>
@@ -54,12 +59,12 @@ const count = ref(0)
                     </div> -->
                     
                     <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-aut  h-screen place-items-center">
-                        <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[68%] shadow-xl bg-deepBlack mx-auto left-5">
+                        <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[70%] shadow-xl bg-deepBlack mx-auto left-5">
                             <img class="w-full lg:h-full xl:h-auto absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
                         </div>
                     </div>
                 </div>
-                <div  v-if="store.home" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 ">
                     <div class="w-11/12 sm:w-11/12 md:w-11/12 lg:w-full xl:w-full mx-auto lg:h-screen lg:grid lg:place-content-center">
                         <div class="w-full text-center sm:text-center md:text-center lg:text-left xl:text-left lg:h-1/2">
                             <!--name & title-->
@@ -81,7 +86,7 @@ const count = ref(0)
                             </div>
                             <!-- button -->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
-                                <div class="about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
+                                <div @click="store.aboutMeButton" class="about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
                                     <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
                                         more about me
                                         <div class="overlay"></div>
@@ -94,7 +99,7 @@ const count = ref(0)
                     </div>
                 </div>
                 <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
-                    <div class="lg:h-screen ">
+                    <div :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="lg:h-screen ">
                         <div class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
                             <img class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
                         </div>

@@ -162,30 +162,7 @@
 </template>
 
 <style scoped>
-/* .project{
-  cursor: pointer;
-  transition: .3s;
-    border-radius: 5px;
-    padding: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-.project::before{
-    content: "";
-    position: absolute;
-    background: rebeccapurple;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    opacity: 0;
-    visibility: hidden;
-    transition: .5s;
- 
-} */
+
 
 
 .scrollbar-hidden::-webkit-scrollbar {
