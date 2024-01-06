@@ -82,7 +82,7 @@ import { store } from '../store/store';
                                     </div>
 
                                     <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">email : </p>
+                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">email:</p>
                                         <p class="lowercase text-white font-semibold font-open text-[14px]" >md.armantext@gmail.com </p>
                                     </div>
 
@@ -91,15 +91,13 @@ import { store } from '../store/store';
                                         <p class="lowercase text-white font-semibold font-open text-base" >bangla , english</p>
                                     </div>
                                 </div>
-
                             </div>
                             
-
                           <!---download cv button-->
                           
                             <div class="w-full pb-14 sm:pb-14 md:pb-0 lg:pb-10 xl:pb-10">
                                 <div class="w-full ">
-                                    <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-start sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
+                                    <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-start sm:justify-start md:justify-start lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
                                         <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
                                             <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
                                                     DOWNLOAD CV

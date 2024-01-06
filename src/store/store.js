@@ -8,7 +8,7 @@ const store = reactive({
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
-    blogPage:false,
+    // blogPage:false,
 
     aboutMeButton(){
         this.aboutMePage = true
@@ -51,11 +51,12 @@ const store = reactive({
         this.blogPage = false
     },
     blogButton(){
-        this.blogPage = true
-        this.home = false
-        this.aboutPage = false
-        this.contactPage = false
-        this.portfolioPage = false
+        // this.blogPage = true
+        // this.home = false
+        // this.aboutPage = false
+        // this.contactPage = false
+        // this.portfolioPage = false
+        console.log('blog page')
     }
 
     

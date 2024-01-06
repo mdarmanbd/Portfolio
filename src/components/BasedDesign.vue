@@ -33,10 +33,12 @@ const count = ref(0)
                 <div v-if="store.contactPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                    <ContactPage></ContactPage>
                 </div>
+
                 <!--blog page-->
-                <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                <!-- <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
                    <Blog></Blog>
-                </div>
+                </div> -->
+                
                 <!--home page-->
                 <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
@@ -106,7 +108,7 @@ const count = ref(0)
                      
                         <!--side nav bar--->
                         <div class=" w-full lg:grid lg:place-items-center lg:h-[75%] xl:h-3/4">
-                            <div class="w-full lg:w-1/4 lg:mx-auto lg:h-[-70%] xl:h-3/5 lg:flex lg:justify-end">
+                            <div class="w-full lg:w-1/4 lg:mx-auto lg:h-[70%] xl:h-3/5 lg:flex lg:justify-end">
                                 <ul class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
                                   bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5 ">
