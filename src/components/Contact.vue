@@ -1,5 +1,6 @@
 <script setup>
 import ContactFrom from './ContactFrom.vue';
+import {store} from '../store/store'
 
 </script>
 
@@ -16,9 +17,9 @@ import ContactFrom from './ContactFrom.vue';
         <div class="w-95 sm:w-95 md:w-95 lg:w-11/12 xl:w-11/12 mx-auto py-5">
           <div class="grid grid-cols-12 gap-3">
             <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
-              <h3 class="uppercase font-poppins font-semibold text-white text-2xl pb-4">don't be shy !</h3>
+              <h3 :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class="uppercase font-poppins font-semibold text-white text-2xl pb-4">don't be shy !</h3>
               <div class="pb-5">
-                <p class="font-open text-white font-medium text-base">Feel free to get in touch with me.I am always open to discussing new project , creative
+                <p :class="[store.lighMode ? 'text-slate-700' : 'text-white']" class="font-open text-white font-medium text-base">Feel free to get in touch with me.I am always open to discussing new project , creative
                     ideas or opportunites to be part of your visions.
                 </p>
               </div>
@@ -27,9 +28,9 @@ import ContactFrom from './ContactFrom.vue';
                   <div class="w-12">
                     <img src="../assets/map.svg">
                   </div>
-                  <div class="w-full ">
-                    <p class="uppercase opacity-80 font-normal text-base text-white font-open pb-1">address point</p>
-                    <p class="text-white font-semibold font-open">123 stree New York city.United States of America 657213. </p>
+                  <div :class="[store.lighMode ? 'text-slate-700' : 'text-white']" class="w-full ">
+                    <p class="uppercase opacity-80 font-normal text-base font-open pb-1">address point</p>
+                    <p class="font-semibold font-open">123 stree New York city.United States of America 657213. </p>
                   </div>
                 </div>
 
@@ -37,9 +38,9 @@ import ContactFrom from './ContactFrom.vue';
                   <div class="w-12">
                     <img src="../assets/mailAmber.svg">
                   </div>
-                  <div class="w-full ">
-                    <p class="uppercase opacity-80 font-normal text-base text-white font-open pb-1">mail me</p>
-                    <p class="text-white font-semibold font-open">md.armantext@gmail.com</p>
+                  <div :class="[store.lighMode ? 'text-slate-700' : 'text-white']" class="w-full ">
+                    <p class="uppercase opacity-80 font-normal text-base font-open pb-1">mail me</p>
+                    <p class="font-semibold font-open">md.armantext@gmail.com</p>
                   </div>
                 </div>
 
@@ -47,9 +48,9 @@ import ContactFrom from './ContactFrom.vue';
                   <div class="w-12">
                     <img src="../assets/phone.svg">
                   </div>
-                  <div class="w-full ">
-                    <p class="uppercase opacity-80 font-normal text-base text-white font-open pb-1">call me</p>
-                    <p class="text-white font-semibold font-open">01778762934</p>
+                  <div :class="[store.lighMode ? 'text-slate-700' : 'text-white']" class="w-full ">
+                    <p class="uppercase opacity-80 font-normal text-base font-open pb-1">call me</p>
+                    <p class="font-semibold font-open">01778762934</p>
                   </div>
                 </div>
               <!---social icon-->  

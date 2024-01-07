@@ -8,7 +8,14 @@ const store = reactive({
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
-    // blogPage:false,
+    lighMode: false,
+
+    lightButton(){
+        this.lighMode = !this.lighMode
+        console.log(this.lighMode)
+       
+    },
+
 
     aboutMeButton(){
         this.aboutMePage = true

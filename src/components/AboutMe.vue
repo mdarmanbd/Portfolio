@@ -7,7 +7,7 @@ import { store } from '../store/store';
     <div class="w-full scrollbar-hidden h-screen overflow-y-auto">
         <div class="">
             <div class="fixed sm:fixed md:fixed lg:fixed xl:fixed left-4 sm:left-4 md:left-8 lg:left-[10%] xl:left-[10%] top-10 sm:top-10 md:top-10 lg:top-10 xl:top-24 w-11/12 sm:w-11/12 md:w-11/12 lg:w-3/4 xl:w-3/4 m-auto z-10 ">
-                <div class="z-10 w-full top-0 bg-eerieBlack rounded-lg ">
+                <div :class="[store.lighMode ? 'bg-gray-200' : 'bg-eerieBlack']" class="z-10 w-full top-0 bg-eerieBlack rounded-lg ">
                     <!--close icon-->
                     <div @click="store.aboutMeCloseButton" class="w-full flex justify-end p-2">
                         <div class="w-10 cursor-pointer">
@@ -34,61 +34,61 @@ import { store } from '../store/store';
                         </div>
                         <!---details-->
                         <div class="py-4 w-full px-2">
-                            <h3 class="text-white uppercase text-xl font-poppins font-semibold pb-4">personal infos</h3>
+                            <h3 :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class="text-white uppercase text-xl font-poppins font-semibold pb-4">personal infos</h3>
                             <div class="w-full flex space-x-0 pb-4">
                                 <!--left side-->
                                 <div class="w-1/2">
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">first name : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >arman </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">first name : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >arman </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">Age : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >27 years </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">Age : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >27 years </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">freelance : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >available </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">freelance : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >available </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">phone : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >01682650196 </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">phone : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >01682650196 </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">skype : </p>
-                                        <p class="lowercase text-white font-semibold font-open text-base" >example@.com </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">skype : </p>
+                                        <p class="lowercase font-semibold font-open text-base" >example@.com </p>
                                     </div>
                                     
                                 </div>
                                 <!---right side-->
                                 <div class="w-1/2">
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">last name : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >hossain </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">last name : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >hossain </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">natonality : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >bangaldeshi </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">natonality : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >bangaldeshi </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">address : </p>
-                                        <p class="capitalize text-white font-semibold font-open text-base" >dhaka </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">address : </p>
+                                        <p class="capitalize font-semibold font-open text-base" >dhaka </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">email:</p>
-                                        <p class="lowercase text-white font-semibold font-open text-[14px]" >md.armantext@gmail.com </p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">email:</p>
+                                        <p class="lowercase font-semibold font-open text-[14px]" >md.armantext@gmail.com </p>
                                     </div>
 
-                                    <div class="pb-4">
-                                        <p class="capitalize text-white opacity-80 font-open font-medium text-base">langages : </p>
-                                        <p class="lowercase text-white font-semibold font-open text-base" >bangla , english</p>
+                                    <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="pb-4">
+                                        <p class="capitalize opacity-80 font-open font-medium text-base">langages : </p>
+                                        <p class="lowercase font-semibold font-open text-base" >bangla , english</p>
                                     </div>
                                 </div>
                             </div>
@@ -115,52 +115,52 @@ import { store } from '../store/store';
                    <!---laptop view-->
                    <!--- details--->
                      <div class="hidden sm:hidden md:hidden lg:block xl:block w-3/4 m-auto">
-                        <h3 class="uppercase text-xl font-poppins font-semibold text-white pb-5">personal infos</h3>
+                        <h3 :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class="uppercase text-xl font-poppins font-semibold text-white pb-5">personal infos</h3>
                         <div class="w-full block sm:block md:block lg:flex xl:flex justify-between gap-2 pb-5">
                            <!---left side---> 
-                            <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
+                            <div :class="[store.lighMode ? 'text-gray-800' : 'text-white']" class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">first name : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">arman</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">first name : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">arman</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">age : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">29 years</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">age : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">29 years</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">freelance : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">available</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">freelance : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">available</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">phone : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">01682650196</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">phone : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">01682650196</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">facebook </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">example@.com</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">facebook </p>
+                                    <p class="capitalize font-open font-semibold text-base ">example@.com</p>
                                 </div>
                             </div>
                           <!---right side-->  
-                            <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
+                            <div :class="[store.lighMode ? 'text-gray-900' : 'text-white']" class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 ">
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">last name : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">hossain</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">last name : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">hossain</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">nationlity : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">bangladeshi</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">nationlity : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">bangladeshi</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">address : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">dhaka</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">address : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">dhaka</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">email : </p>
-                                    <p class="lowercase font-open font-semibold text-base text-white ">md.armantext@gmail.com</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">email : </p>
+                                    <p class="lowercase font-open font-semibold text-base ">md.armantext@gmail.com</p>
                                 </div>
                                 <div class="flex space-x-3 pb-4">
-                                    <p class="capitalize font-open text-base font-medium text-white opacity-85">langages : </p>
-                                    <p class="capitalize font-open font-semibold text-base text-white ">bangla , english</p>
+                                    <p class="capitalize font-open text-base font-medium opacity-85">langages : </p>
+                                    <p class="capitalize font-open font-semibold text-base ">bangla , english</p>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@ import { store } from '../store/store';
                             <div class="w-full ">
                                 <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
                                     <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
-                                        <button class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
+                                        <button :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class=" px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
                                                 DOWNLOAD CV
                                             <div class="overlay"></div>
                                         </button>

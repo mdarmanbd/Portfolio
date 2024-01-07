@@ -19,6 +19,7 @@ export default {
         nero:'#2b2a2a',
         eerieBlack: '#252525',
         lavenderGray: '#edeff6',
+        darkGray:'#666'
 
       },
       zIndex:{

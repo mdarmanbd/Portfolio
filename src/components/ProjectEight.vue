@@ -1,12 +1,13 @@
 <script setup>
 import {project} from '../store/project'
+import {store} from '../store/store'
 </script>
 
 <template>
     <div class="w-full ">
         <div class="">
             <div class="fixed sm:fixed md:fixed lg:fixed xl:fixed left-[4%] sm:left-[4%] md:left-[4%] lg:left-[11.7%] xl:left-[11.7%] top-10 sm:top-10 md:top-10 lg:top-10 xl:top-24 w-11/12 sm:w-11/12 md:w-11/12 lg:w-3/5 m-auto z-10 ">
-                <div class="z-10 w-full top-0 bg-eerieBlack rounded-lg ">
+                <div :class="[store.lighMode ? 'bg-gray-200' : 'bg-eerieBlack']" class="z-10 w-full top-0 bg-eerieBlack rounded-lg ">
                     <!--close icon-->
                     <div class="w-full flex justify-end p-2">
                         <div @click="project.closeProjectButton" class="w-10 cursor-pointer">
@@ -22,25 +23,25 @@ import {project} from '../store/project'
                         <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 space-y-2">
                             <div class="flex space-x-2">
                                 <img src="../assets/project.svg">
-                                <p class="text-lavenderGray font-open text-base font-medium">Project : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">Shoot</p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-medium">Project : </p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-semibold">Shoot</p>
                             </div>
                             <div class="flex space-x-2">
                                 <img src="../assets/code.svg">
-                                <p class="text-lavenderGray font-open text-base font-medium">Langages : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">Bootstrap</p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-medium">Langages : </p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-semibold">Bootstrap</p>
                             </div>
                            
                         </div>
                         <div class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-0 space-y-2">
                             <div class="flex space-x-2">
                                 <img src="../assets/client.svg">
-                                <p class="text-lavenderGray font-open text-base font-medium">Client : </p>
-                                <p class="text-lavenderGray font-open text-base font-semibold">Facebook</p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-medium">Client : </p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-semibold">Facebook</p>
                             </div>
                             <div class="flex space-x-2">
                                 <img src="../assets/link.svg">
-                                <p class="text-lavenderGray font-open text-base font-medium">Preview : </p>
+                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-lavenderGray']" class="text-lavenderGray font-open text-base font-medium">Preview : </p>
                                 <p class="text-lavenderGray font-open text-base font-semibold">
                                     <a class="underline text-amber" href="www.facebook.com" target="blank">www.arman.com</a>
                                 </p>
