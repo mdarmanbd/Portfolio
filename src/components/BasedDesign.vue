@@ -7,10 +7,10 @@ import About from './About.vue';
 import portfolio from './Portfolio.vue';
 import ContactPage from './Contact.vue'
 import Blog from './Blog.vue'
+import {useDark , useToggle} from '@vueuse/core'
 
-
-
-
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 
 
 </script>
@@ -18,7 +18,7 @@ import Blog from './Blog.vue'
 <template>
     <section>
         <div class="w-full  bg-dreamlessSleep">
-            <div :class="[store.lighMode ? 'bg-slate-50 ' : 'bg-dreamlessSleep']" class="w-full grid grid-cols-12 h-full bg-dreamlessSleep fixed sm:fixed md:fixed lg:static xl:static" >
+            <div class="w-full grid grid-cols-12 h-full dark:bg-dreamlessSleep bg-lightBlue fixed sm:fixed md:fixed lg:static xl:static" >
                 <!---about me button--->
                 <div v-if="store.aboutMePage" class="col-span-10">
                     <AboutMe></AboutMe>
@@ -37,9 +37,9 @@ import Blog from './Blog.vue'
                 </div>
 
                 <!--blog page-->
-                <!-- <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
+                <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
                    <Blog></Blog>
-                </div> -->
+                </div>
                 
                 <!--home page-->
                 <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
@@ -62,7 +62,7 @@ import Blog from './Blog.vue'
                         </div>
                     </div> -->
                     
-                    <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-aut  h-screen place-items-center">
+                    <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-auto  h-screen place-items-center">
                         <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[70%] shadow-xl bg-deepBlack mx-auto left-5">
                             <img class="w-full lg:h-full xl:h-auto absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
                         </div>
@@ -73,16 +73,17 @@ import Blog from './Blog.vue'
                         <div class="w-full text-center sm:text-center md:text-center lg:text-left xl:text-left lg:h-1/2">
                             <!--name & title-->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto lg:text-center xl:text-center py-1 sm:py-1 md:py-1 lg:py-0 xl:py-0">
-                                <h2 class="flex justify-center text-amber text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
+                                <h2 class="dark:text-white text-mideNightTeal flex justify-center text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
                                     <span class="hidden sm:hidden md:hidden lg:flex xl:flex">
-                                        <img class="mr-1" src="../assets/underLine.svg">
+                                        <!-- <img class="mr-1" src="../assets/underLine.svg"> -->
+                                        <p class="w-12">-</p>
                                     </span>
                                     i'm arman hossain.</h2>
-                                <h2 :class="[store.lighMode? 'text-gray-950' : 'text-white']" class="text-white font-poppins font-bold text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl uppercase ">web designer</h2>
+                                <h2 class="dark:text-white text-darkTeal font-poppins font-bold text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl uppercase ">web designer</h2>
                             </div>
                             <!--details-->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto  pb-2 sm:pb-2 md:pb-2 lg:pb-0 xl:pb-0 lg:py-5 xl:py-5">
-                                <p :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class="text-white font-poppins font-medium text-balance sm:text-balance md:text-balance lg:text-left xl:text-left text-sm sm:text-sm md:text-sm lg:text-base xl:text-base leading-6 sm:leading-6 md:leading-6 lg:leading-9 xl:leading-9">
+                                <p class="dark:text-white text-darkTeal font-poppins font-medium text-balance sm:text-balance md:text-balance lg:text-left xl:text-left text-sm sm:text-sm md:text-sm lg:text-base xl:text-base leading-6 sm:leading-6 md:leading-6 lg:leading-9 xl:leading-9">
                                     i'm Bangladeshi based web designer & front-end developer 
                                     focused on crafting clean  & user-friendly experiences.
                                     i am passionate about building excellent software that improves
@@ -92,7 +93,7 @@ import Blog from './Blog.vue'
                             <!-- button -->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
                                 <div @click="store.aboutMeButton" class="about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
-                                    <button :class="[store.lighMode ? 'text-gray-950' : 'text-white']" class="px-5 text-sm font-montserrat font-semibold text-white bg-transparent uppercase cursor-pointer ">
+                                    <button class="dark:text-white text-darkTeal px-5 text-sm font-montserrat font-semibold bg-transparent uppercase cursor-pointer ">
                                         more about me
                                         <div class="overlay"></div>
                                     </button>
@@ -104,36 +105,36 @@ import Blog from './Blog.vue'
                     </div>
                 </div>
                 <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-2 xl:col-span-2 h-screen">
-                    <div :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="lg:h-screen ">
-                        <div @click="store.lightButton" class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
-                            <img v-if="!store.lighMode" class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
-                            <img v-if="store.lighMode" class="w-14 bg-lightBlack rounded-full p-2 cursor-pointer" src="../assets/moon.svg">
+                    <div :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class="lg:h-screen dark:bg-dreamlessSleep bg-lightBlue">
+                        <div @click="toggleDark()" class="hidden sm:hidden md:hidden lg:flex xl:flex w-full justify-center py-5">
+                            <img v-if="isDark" class="w-14 bg-lightBlack rounded-full p-1 cursor-pointer" src="../assets/light.svg">
+                            <img v-if="!isDark" class="w-14 bg-lightBlack rounded-full p-2 cursor-pointer" src="../assets/moon.svg">
                         </div>
                      
                         <!--side nav bar--->
                         <div class=" w-full lg:grid lg:place-items-center lg:h-[75%] xl:h-3/4">
                             <div class="w-full lg:w-1/4 lg:mx-auto lg:h-[70%] xl:h-3/5 lg:flex lg:justify-end">
-                                <ul :class="[store.lighMode ? 'lg:bg-slate-50' : 'lg:bg-dreamlessSleep']" class="w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
+                                <ul class="dark:lg:bg-dreamlessSleep lg:bg-lightBlue w-full sm:w-full md:w-full lg:w-fit xl:w-fit absolute sm:absolute md:absolute lg:static xl:static
                                  bottom-0 flex sm:flex md:flex lg:block xl:block justify-around sm:justify-around md:justify-around
-                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 lg:bg-dreamlessSleep py-3 lg:space-y-5 ">
+                                  bg-gray-700 sm:bg-gray-700 md:bg-gray-700 py-3 lg:space-y-5 ">
 
-                                    <li @click="store.homeButton" :class="[store.lighMode ? 'lg:!bg-slate-50' : 'lg:bg-dreamlessSleep']" class="home-icon bg-amber rounded-full overflow-hidden">
+                                    <li @click="store.homeButton" class="home-icon bg-amber rounded-full overflow-hidden">
                                         <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">home</p>
                                         <img class="p-2" src="../assets/home.svg">
                                     </li>
-                                    <li @click="store.aboutButton" :class="[store.lighMode ? 'lg:!bg-slate-50' : 'lg:bg-dreamlessSleep']" class="home-icon about bg-gray-600 rounded-full overflow-hidden">
+                                    <li @click="store.aboutButton" class="home-icon about bg-gray-600 rounded-full overflow-hidden">
                                         <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">about</p>
                                         <img class="p-2 about" src="../assets/person.svg">
                                     </li>
-                                    <li @click="store.portfolioButton" :class="[store.lighMode ? 'lg:!bg-slate-50' : 'lg:bg-dreamlessSleep']" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                    <li @click="store.portfolioButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
                                         <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">portfolio</p>
                                         <img class="p-2 about" src="../assets/beg.svg">
                                     </li>
-                                    <li @click="store.contactButton" :class="[store.lighMode ? 'lg:!bg-slate-50' : 'lg:bg-dreamlessSleep']" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                    <li @click="store.contactButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
                                         <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">contact</p>
                                         <img class="p-2 about" src="../assets/mail.svg">
                                     </li>
-                                    <li @click="store.blogButton" :class="[store.lighMode ? 'lg:!bg-slate-50' : 'lg:bg-dreamlessSleep']" class="home-icon bg-gray-600 rounded-full overflow-hidden">
+                                    <li @click="store.blogButton" class="home-icon bg-gray-600 rounded-full overflow-hidden">
                                         <p class="hidden sm:hidden md:hidden lg:block xl:block uppercase font-poppins text-base text-white font-medium ">blog</p>
                                         <img class="p-2 about" src="../assets/sms.svg">
                                     </li>
@@ -152,18 +153,11 @@ import Blog from './Blog.vue'
 
 
 
-/* .dark{
-    background-color: rebeccapurple !important;
-    color: #ffb400 !important;    
-}
-
- */
-
-
 
 /* fixed color block */
     .color-block{
-        background-color: rgb(216, 169, 27);
+        /* background-color: rgb(216, 169, 27); */
+        background-color: #5C8374;
         position: fixed;
         height: 200%;
         width: 100%;
@@ -242,7 +236,8 @@ import Blog from './Blog.vue'
             justify-content: end;
             /* justify-content: end; */
             width:160px;
-            background: #111111;
+            /* background: #111111; */
+            background: transparent;
             position: relative;
             cursor: pointer;
         }

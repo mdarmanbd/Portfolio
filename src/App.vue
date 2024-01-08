@@ -8,4 +8,13 @@ import MasterLayout from './components/MasterLayout.vue'
 
 </template>
 
-<style scoped></style>
+<style scoped>
+/* html.dark {
+  color-scheme: dark;
+}
+
+body{
+  @apply dark:bg-slate-200
+} */
+
+</style>

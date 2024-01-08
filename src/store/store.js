@@ -2,19 +2,23 @@ import{reactive} from 'vue'
 
 
 const store = reactive({
+
+
+
     aboutMePage:false,
     opacityActiveHomePage:false,
     home: true,
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
-    lighMode: false,
+    blogPage : false,
+    // lighMode: false,
 
-    lightButton(){
-        this.lighMode = !this.lighMode
-        console.log(this.lighMode)
+    // lightButton(){
+    //     this.lighMode = !this.lighMode
        
-    },
+       
+    // },
 
 
     aboutMeButton(){
@@ -58,12 +62,12 @@ const store = reactive({
         this.blogPage = false
     },
     blogButton(){
-        // this.blogPage = true
-        // this.home = false
-        // this.aboutPage = false
-        // this.contactPage = false
-        // this.portfolioPage = false
-        console.log('blog page')
+        this.blogPage = true
+        this.home = false
+        this.aboutPage = false
+        this.contactPage = false
+        this.portfolioPage = false
+       
     }
 
     
