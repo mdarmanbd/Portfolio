@@ -1,13 +1,11 @@
 <script setup>
-
-import BasedDesign from './BasedDesign.vue';
-
-
-
+    import BasedDesign from './BasedDesign.vue';
 </script>
 
 <template>
+
   <BasedDesign/>
+
 </template>
 
 <style scoped>

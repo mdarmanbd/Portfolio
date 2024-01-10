@@ -1,6 +1,6 @@
 <script setup>
 import {project} from '../store/project'
-import {store} from '../store/store'
+
 </script>
 
 <template>
@@ -61,8 +61,6 @@ import {store} from '../store/store'
 </template>
 
 <style scoped>
-/* .z-index-1000{
-    z-index: 1000;
-} */
+
 
 </style>

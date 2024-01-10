@@ -50,7 +50,6 @@ import { fromValidation} from '../store/Cfrom'
 /* sent button design */
  .about-button{
      cursor: pointer;
-     /* background-color: red; */
      background-color: transparent;
      position: relative;
      overflow: hidden;

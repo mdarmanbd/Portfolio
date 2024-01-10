@@ -1,6 +1,6 @@
 <script setup>
 import {project} from '../store/project'
-import {store} from '../store/store'
+
 </script>
 
 <template>

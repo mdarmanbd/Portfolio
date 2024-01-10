@@ -6,7 +6,6 @@ import AboutMe from './AboutMe.vue';
 import About from './About.vue';
 import portfolio from './Portfolio.vue';
 import ContactPage from './Contact.vue'
-import Blog from './Blog.vue'
 import {useDark , useToggle} from '@vueuse/core'
 
 const isDark = useDark()
@@ -35,12 +34,6 @@ const toggleDark = useToggle(isDark)
                 <div v-if="store.contactPage" class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-10 ">
                    <ContactPage></ContactPage>
                 </div>
-
-                <!--blog page-->
-                <div v-if="store.blogPage" class="col-span-10 sm:col-span-10 md:col-span-10 lg:col-span-10 xl:col-span-10 ">
-                   <Blog></Blog>
-                </div>
-                
                 <!--home page-->
                 <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
@@ -55,13 +48,6 @@ const toggleDark = useToggle(isDark)
                         </div>
                     </div>
                    <!---big screen img--> 
-
-                    <!-- <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-10 sm:py-10 md:py-10 lg:py-0 xl:py-0 lg:relative w-full sm:w-full md:w-full lg:w-11/12 xl:w-11/12 mx-auto lg:h-screen xl:h-screen  lg:place-items-center xl:place-items-center">
-                        <div class="w-3/5 sm:w-3/5 md:w-3/5 lg:w-full xl:w-full rounded-full sm:rounded-full md:rounded-full lg:rounded-lg xl:rounded-lg  mx-auto block sm:block md:block lg:absolute bg-deepBlack lg:h-3/4 xl:h-3/4 shadow-xl">
-                            <img class="w-full  " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
-                        </div>
-                    </div> -->
-                    
                     <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-auto  h-screen place-items-center">
                         <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[70%] shadow-xl bg-deepBlack mx-auto left-5">
                             <img class="w-full lg:h-full xl:h-auto absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
@@ -89,6 +75,7 @@ const toggleDark = useToggle(isDark)
                                     i am passionate about building excellent software that improves
                                     the lives of those around me.  
                                 </p>
+                               
                             </div>
                             <!-- button -->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
@@ -150,9 +137,6 @@ const toggleDark = useToggle(isDark)
 </template>
 
 <style scoped>
-
-
-
 
 /* fixed color block */
     .color-block{
@@ -235,6 +219,7 @@ const toggleDark = useToggle(isDark)
             display: flex;
             justify-content: end;
             /* justify-content: end; */
+           
             width:160px;
             /* background: #111111; */
             background: transparent;
