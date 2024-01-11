@@ -14,47 +14,58 @@ const project = reactive({
     nineProject:false,
 
     projectOne(){
-        this.opacityActive = true
-        this.firstProject = true
+        // this.opacityActive = true
+        // this.firstProject = true
+        window.open('https://github.com/mdarmanbd/startech_project','_blank')
        
     },
     projectTwo(){
-        this.secondProject = true
-        this.opacityActive = true
+        // this.secondProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/module_11_Assinment_1/','_blank')
     },
 
     projectThree(){
-        this.thirdProject = true
-        this.opacityActive = true
+        // this.thirdProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/module_1_google_weather_app','_blank')
     },
     projectFour(){
-        this.fourProject = true
-        this.opacityActive = true
+        // this.fourProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/shariaislamicresearchcentre','_blank')
     },
 
     projectFive(){
-        this.fiveProject = true
-        this.opacityActive = true
+        // this.fiveProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/chaldal_clone','_blank')
     },
 
     projectSix(){
-        this.sixProject = true
-        this.opacityActive = true
+        // this.sixProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/rick-n-morty','_blank')
     },
 
     projectSeven(){
-        this.sevenProject = true
-        this.opacityActive = true
+        // this.sevenProject = true
+        // this.opacityActive = true
+        window.open('https://github.com/mdarmanbd/ninja-js','_blank')
     },
 
     projectEight(){
-        this.eightProject = true
-        this.opacityActive = true
+        // this.eightProject = true
+        // this.opacityActive = true
+       
+        window.open(' https://github.com/mdarmanbd/project','_blank')
     },
 
     projectNine(){
-        this.nineProject = true
-        this.opacityActive = true
+        // this.nineProject = true
+        // this.opacityActive = true
+        
+        window.open(' https://github.com/mdarmanbd/project','_blank')
     },
 
     closeProjectButton(){

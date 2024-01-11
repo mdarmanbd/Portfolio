@@ -54,13 +54,13 @@ import ContactFrom from './ContactFrom.vue';
               <!---social icon-->  
                 <div class="flex space-x-3 w-full">
                   <div class="w-10">
-                    <a href="#">
+                    <a href="https://www.facebook.com/arman.vai.9083" target="_blank">
                       <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/facebook.svg">
                     </a>
                   </div>
                   <div class="w-10">
-                    <a href="#">
-                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/twitter.svg">
+                    <a href="https://www.linkedin.com/in/armanhossainbd/" target="_blank">
+                      <img class=" bg-lightBlack rounded-full p-2 hover:bg-amber hover:duration-300 duration-300 cursor-pointer" src="../assets/linkdin.svg">
                     </a>
                   </div>
                   <div class="w-10">
