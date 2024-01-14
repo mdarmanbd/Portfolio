@@ -37,7 +37,7 @@ const toggleDark = useToggle(isDark)
                 <!--home page-->
                 <div v-if="store.home" :class="[store.opacityActiveHomePage ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 ">
                     <div class="hidden sm:hidden md:hidden lg:flex xl:flex">
-                        <div class= "color-block"> </div>
+                      a  <div class= "color-block"> </div>
                     </div>
                    <!---responsive img---> 
                     <div class="grid sm:grid md:grid lg:hidden xl:hidden grid-cols-12">

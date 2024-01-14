@@ -26,41 +26,41 @@
         <!--select project-->
 
         <!--project one-->
-            <div v-if="project.firstProject" class="w-full">
+            <!-- <div v-if="project.firstProject" class="w-full">
                 <projectOne></projectOne>
-            </div>
+            </div> -->
         <!---project two-->
-            <div v-if="project.secondProject" class="w-full">
+            <!-- <div v-if="project.secondProject" class="w-full">
                 <ProjectTwoVue></ProjectTwoVue>
-            </div>
+            </div> -->
         <!--project three-->
-            <div v-if="project.thirdProject" class="w-full">
+            <!-- <div v-if="project.thirdProject" class="w-full">
                 <ProjectThree></ProjectThree>
-            </div>
+            </div> -->
         <!---project four-->
-            <div v-if="project.fourProject" class="w-full">
+            <!-- <div v-if="project.fourProject" class="w-full">
                 <ProjectFour></ProjectFour>
-            </div>
+            </div> -->
         <!---project five--->
-            <div v-if="project.fiveProject" class="w-full">
+            <!-- <div v-if="project.fiveProject" class="w-full">
                 <ProjectFive></ProjectFive>
-            </div>
+            </div> -->
         <!---project six-->
-            <div v-if="project.sixProject" class="w-full">
+            <!-- <div v-if="project.sixProject" class="w-full">
                 <ProjectSix></ProjectSix>
-            </div>
+            </div> -->
         <!---project seven-->
-            <div v-if="project.sevenProject" class="w-full">
+            <!-- <div v-if="project.sevenProject" class="w-full">
                <projectSeven></projectSeven>
-            </div>
+            </div> -->
         <!---project eight-->
-            <div v-if="project.eightProject" class="w-full">
+            <!-- <div v-if="project.eightProject" class="w-full">
                 <ProjectEight></ProjectEight>
-            </div>
+            </div> -->
         <!----project nine--> 
-            <div v-if="project.nineProject" class="w-full">
+            <!-- <div v-if="project.nineProject" class="w-full">
                 <ProjectNine></ProjectNine>
-            </div>
+            </div> -->
 
         <!---project--->
         <div class="w-full ">
