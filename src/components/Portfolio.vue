@@ -1,14 +1,6 @@
 <script setup>
     import { project } from '../store/project';
-    import projectOne from './ProjectOne.vue'
-    import ProjectTwoVue from './ProjectTwo.vue';
-    import ProjectThree from './ProjectThree.vue'
-    import ProjectFour from './ProjectFour.vue'
-    import ProjectFive from './ProjectFive.vue'
-    import ProjectSix from './ProjectSix.vue'
-    import projectSeven from './ProjectSeven.vue'
-    import ProjectEight from './ProjectEight.vue'
-    import ProjectNine from './ProjectNine.vue'
+  
 
 
 
@@ -23,45 +15,7 @@
                 <p class="text-center text-amber font-poppins font-extrabold text-4xl uppercase">my portfolio</p>
             </div>
         </div>
-        <!--select project-->
-
-        <!--project one-->
-            <!-- <div v-if="project.firstProject" class="w-full">
-                <projectOne></projectOne>
-            </div> -->
-        <!---project two-->
-            <!-- <div v-if="project.secondProject" class="w-full">
-                <ProjectTwoVue></ProjectTwoVue>
-            </div> -->
-        <!--project three-->
-            <!-- <div v-if="project.thirdProject" class="w-full">
-                <ProjectThree></ProjectThree>
-            </div> -->
-        <!---project four-->
-            <!-- <div v-if="project.fourProject" class="w-full">
-                <ProjectFour></ProjectFour>
-            </div> -->
-        <!---project five--->
-            <!-- <div v-if="project.fiveProject" class="w-full">
-                <ProjectFive></ProjectFive>
-            </div> -->
-        <!---project six-->
-            <!-- <div v-if="project.sixProject" class="w-full">
-                <ProjectSix></ProjectSix>
-            </div> -->
-        <!---project seven-->
-            <!-- <div v-if="project.sevenProject" class="w-full">
-               <projectSeven></projectSeven>
-            </div> -->
-        <!---project eight-->
-            <!-- <div v-if="project.eightProject" class="w-full">
-                <ProjectEight></ProjectEight>
-            </div> -->
-        <!----project nine--> 
-            <!-- <div v-if="project.nineProject" class="w-full">
-                <ProjectNine></ProjectNine>
-            </div> -->
-
+        
         <!---project--->
         <div class="w-full ">
         <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/4  m-auto">
