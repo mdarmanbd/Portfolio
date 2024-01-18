@@ -1,6 +1,8 @@
 <script setup>
 import { store } from '../store/store';
 
+
+
 </script>
 
 <template>
@@ -99,8 +101,8 @@ import { store } from '../store/store';
                                 <div class="w-full ">
                                     <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-start sm:justify-start md:justify-start lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
                                         <div class="about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
-                                            <button class="dark:text-white text-darkTeal px-5 text-sm font-montserrat font-semibold bg-transparent uppercase cursor-pointer ">
-                                                    DOWNLOAD CV 
+                                            <button @click="store.clickedDownload" class="dark:text-white text-darkTeal px-5 text-sm font-montserrat font-semibold bg-transparent uppercase cursor-pointer ">
+                                                    DOWNLOAD CV
                                                 <div class="overlay"></div>
                                             </button>
                                                 <!--button img icon-->
@@ -168,17 +170,14 @@ import { store } from '../store/store';
                          <div class="w-full pb-14 sm:pb-14 md:pb-0 lg:pb-10 xl:pb-10">
                             <div class="w-full ">
                                 <div class="!w-full sm:!w-full md:!w-full lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto flex justify-center sm:justify-center md:justify-center lg:justify-start xl:justify-start pt-3 sm:pt-3 md:pt-3 lg:pt-0 xl:pt-3">
-                                    <a href="../file/Arman Hossain (CV).pdf" download="../file/Arman Hossain (CV).pdf">
-                                        <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
-                                            <button class=" dark:text-white text-darkTeal px-5 text-sm font-montserrat font-semibold bg-transparent uppercase cursor-pointer ">
-                                                    DOWNLOAD CV
-                                                <div class="overlay"></div>
-                                            </button>
-                                            <!--button img icon-->
-                                            <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
-                                        </div>
-                                    </a>
-                                    
+                                    <div class=" about-button flex justify-between gap-3 lg:w-64 xl:w-64 border border-amber rounded-full">
+                                        <button @click="store.clickedDownload" class=" dark:text-white text-darkTeal px-5 text-sm font-montserrat font-semibold bg-transparent uppercase cursor-pointer ">
+                                            DOWNLOAD CV
+                                            <div class="overlay"></div>
+                                        </button>
+                                        <!--button img icon-->
+                                        <img class="w-12 p-1 bg-amber rounded-full " src="../assets/download.svg">
+                                    </div>
                                 </div>
                             </div>
                         </div>

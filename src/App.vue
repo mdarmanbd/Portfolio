@@ -3,8 +3,14 @@ import MasterLayout from './components/MasterLayout.vue'
 </script>
 
 <template>
-  
-  <MasterLayout />
+  <div class="w-full">
+    <RouterView></RouterView>
+    <MasterLayout />
+
+   
+
+  </div>
+
 
 </template>
 

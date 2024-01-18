@@ -1,4 +1,5 @@
 import{reactive} from 'vue'
+import router from '../router/router'
 
 
 const store = reactive({
@@ -8,6 +9,7 @@ const store = reactive({
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
+    // downloadPage : true,
 
 
     aboutMeButton(){
@@ -52,7 +54,21 @@ const store = reactive({
     },
     blogButton(){
        window.open("https://www.google.com/" , "_blank")   
-    }
+    },
+    clickedDownload(){
+        
+        
+        window.open('https://drive.google.com/file/d/1tO-t-bmPBP2-yRI8KBVFWs4MzgQCJRPC/view' , '_blank')
+       
+        //     const link = document.createElement('a');
+        //   link.href = 'https://drive.google.com/file/d/1tO-t-bmPBP2-yRI8KBVFWs4MzgQCJRPC/view';
+        //   link.setAttribute('download', 'file.png'); //or any other extension
+        //   document.body.appendChild(link);
+        //   link.click();
+        
+        
+    },
+    
 
     
 })
