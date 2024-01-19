@@ -56,17 +56,7 @@ const store = reactive({
        window.open("https://www.google.com/" , "_blank")   
     },
     clickedDownload(){
-        
-        
-        window.open('https://drive.google.com/file/d/1tO-t-bmPBP2-yRI8KBVFWs4MzgQCJRPC/view' , '_blank')
-       
-        //     const link = document.createElement('a');
-        //   link.href = 'https://drive.google.com/file/d/1tO-t-bmPBP2-yRI8KBVFWs4MzgQCJRPC/view';
-        //   link.setAttribute('download', 'file.png'); //or any other extension
-        //   document.body.appendChild(link);
-        //   link.click();
-        
-        
+        window.open('https://drive.google.com/file/d/12WPKHm6VYJ0uqFNk1r6wCO0H2QNdLaKT/view' , '_blank')
     },
     
 
