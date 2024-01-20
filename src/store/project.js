@@ -33,7 +33,7 @@ const project = reactive({
     projectFour(){
         // this.fourProject = true
         // this.opacityActive = true
-        window.open('https://github.com/mdarmanbd/shariaislamicresearchcentre','_blank')
+        window.open('https://github.com/mdarmanbd/ninja-js','_blank')
     },
 
     projectFive(){
@@ -51,21 +51,21 @@ const project = reactive({
     projectSeven(){
         // this.sevenProject = true
         // this.opacityActive = true
-        window.open('https://github.com/mdarmanbd/ninja-js','_blank')
+        window.open('https://mdarmanbd.github.io/e-commerce-shoes-/','_blank')
     },
 
     projectEight(){
         // this.eightProject = true
         // this.opacityActive = true
        
-        window.open(' https://github.com/mdarmanbd/project','_blank')
+        window.open('https://mdarmanbd.github.io/e-commerce_furniture_projec/','_blank')
     },
 
     projectNine(){
         // this.nineProject = true
         // this.opacityActive = true
         
-        window.open(' https://github.com/mdarmanbd/project','_blank')
+        window.open('https://mdarmanbd.github.io/e-commerce_fashion_project/#','_blank')
     },
 
     closeProjectButton(){
