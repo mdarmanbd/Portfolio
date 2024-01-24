@@ -39,7 +39,7 @@ const project = reactive({
     projectFive(){
         // this.fiveProject = true
         // this.opacityActive = true
-        window.open('https://github.com/mdarmanbd/chaldal_clone','_blank')
+        window.open('https://cosmic-cactus-88c529.netlify.app/','_blank')
     },
 
     projectSix(){
