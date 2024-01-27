@@ -14,8 +14,7 @@
             <div class="absolute top-3 w-full py-10">
                 <p class="text-center text-amber font-poppins font-extrabold text-4xl uppercase">my portfolio</p>
             </div>
-        </div>
-        
+        </div> 
         <!---project--->
         <div class="w-full ">
         <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/4  m-auto">

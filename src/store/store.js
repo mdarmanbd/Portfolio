@@ -9,9 +9,6 @@ const store = reactive({
     aboutPage: false,
     portfolioPage: false,
     contactPage: false,
-    // downloadPage : true,
-
-
     aboutMeButton(){
         this.aboutMePage = true
         this.opacityActiveHomePage = true
