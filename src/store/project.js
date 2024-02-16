@@ -14,14 +14,14 @@ const project = reactive({
     nineProject:false,
 
     projectOne(){
-        window.open('https://github.com/mdarmanbd/startech_project','_blank')
+        window.open('https://dashing-khapse-e9dbe5.netlify.app/','_blank')
        
     },
     projectTwo(){
-        window.open('https://github.com/mdarmanbd/module_11_Assinment_1/','_blank')
+        window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
     },
     projectThree(){
-        window.open('https://github.com/mdarmanbd/module_1_google_weather_app','_blank')
+        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank')
     },
     projectFour(){
         window.open('https://github.com/mdarmanbd/ninja-js','_blank')
