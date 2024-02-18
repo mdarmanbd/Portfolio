@@ -147,7 +147,7 @@
                   </div>
                   <div class="absolute bg-amber rounded-lg top-0 left-0 w-full h-full opacity-0 hover:opacity-100 duration-300">
                     <div class=" absolute top-[40%] left-0 w-full h-full">
-                      <p class="z-10 text-white font-poppins font-bold text-xl text-center">Hello World</p>
+                      <p class="z-10 text-white font-poppins font-bold text-xl text-center">bootstrap 5</p>
                     </div>
                   </div>
                 </div>
