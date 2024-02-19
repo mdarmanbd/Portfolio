@@ -30,7 +30,7 @@ import ContactFrom from './ContactFrom.vue';
                   </div>
                   <div class="w-full ">
                     <p class="uppercase dark:text-white text-darkTeal opacity-80 font-normal text-base font-open pb-1">address point</p>
-                    <p class="font-semibold dark:text-white text-darkTeal text-base font-open">123 stree New York city.United States of America 657213. </p>
+                    <p class="font-semibold dark:text-white text-darkTeal text-base font-open">Uttara , Dhaka-1230</p>
                   </div>
                 </div>
                 <div class="flex space-x-0 pb-5">
@@ -48,7 +48,7 @@ import ContactFrom from './ContactFrom.vue';
                   </div>
                   <div class="w-full ">
                     <p class="uppercase opacity-80 font-normal dark:text-white text-darkTeal text-base font-open pb-1">call me</p>
-                    <p class="font-semibold font-open dark:text-white text-darkTeal text-base">01778762934</p>
+                    <p class="font-semibold font-open dark:text-white text-darkTeal text-base">01682650196</p>
                   </div>
                 </div>
               <!---social icon-->  
