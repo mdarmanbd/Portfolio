@@ -53,8 +53,8 @@ const store = reactive({
        window.open("https://www.google.com/" , "_blank")   
     },
     clickedDownload(){
-        // window.open('https://drive.google.com/file/d/12WPKHm6VYJ0uqFNk1r6wCO0H2QNdLaKT/view' , '_blank')
-        window.open('https://drive.google.com/file/d/1H-oSr4IAFk4HfkMqbH3xXP32sea01WFm/view','_blank')
+        window.open('https://drive.google.com/file/d/1H-oSr4IAFk4HfkMqbH3xXP32sea01WFm/view?usp=sharing','_blank')
+        
     },
     
 
