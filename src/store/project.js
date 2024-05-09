@@ -24,7 +24,7 @@ const project = reactive({
         window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank')
     },
     projectFour(){
-        window.open('https://github.com/mdarmanbd/ninja-js','_blank')
+        window.open('https://kidslandbd.netlify.app/','_blank')
     },
 
     projectFive(){

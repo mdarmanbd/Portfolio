@@ -51,7 +51,7 @@ const toggleDark = useToggle(isDark)
                    <!---big screen img--> 
                     <div class="hidden sm:hidden md:hidden lg:grid xl:grid py-0 relative w-11/12 mx-auto  h-screen place-items-center">
                         <div class="w-full rounded-lg absolute lg:h-[50%] xl:h-[60%] 2xl:h-[70%] shadow-xl bg-deepBlack mx-auto left-5">
-                            <img class="w-full lg:h-full xl:h-auto absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
+                            <img class="w-full lg:h-full xl:h-full absolute bottom-0 " src="../assets/arman-removebg-jpg.png" alt="Arman.jpg">
                         </div>
                     </div>
                 </div>
@@ -60,12 +60,13 @@ const toggleDark = useToggle(isDark)
                         <div class="w-full text-center sm:text-center md:text-center lg:text-left xl:text-left lg:h-1/2">
                             <!--name & title-->
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto lg:text-center xl:text-center py-1 sm:py-1 md:py-1 lg:py-0 xl:py-0">
-                                <h2 class="dark:text-white text-mideNightTeal flex justify-center text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
-                                    <span class="hidden sm:hidden md:hidden lg:flex xl:flex">
+                                <h2 class="  dark:text-white text-mideNightTeal flex justify-center text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
+                                    <span class="relative before:absolute before:content-[''] before:w-10 before:h-1 before:top-4 before:left-[-50px] before:bg-yellow-500 hidden  xl:flex ">
                                         <!-- <img class="mr-1" src="../assets/underLine.svg"> -->
-                                        <p class="w-12">-</p>
+                                        <!-- <p class="w-12">-</p> -->
                                     </span>
-                                    i'm arman hossain.</h2>
+                                    i'm arman hossain.
+                                </h2>
                                 <h2 class="dark:text-white text-darkTeal font-poppins font-bold text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl uppercase ">web designer</h2>
                             </div>
                             <!--details-->
@@ -138,6 +139,22 @@ const toggleDark = useToggle(isDark)
 </template>
 
 <style scoped>
+
+
+.name{
+    position: relative;
+}
+
+.name::after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+
+}
 
 /* fixed color block */
     .color-block{
