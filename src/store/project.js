@@ -18,10 +18,10 @@ const project = reactive({
        
     },
     projectTwo(){
-        window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
+        window.open('https://expensetrackermd.netlify.app/','_blank')
     },
     projectThree(){
-        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank')
+        window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
     },
     projectFour(){
         window.open('https://kidslandbd.netlify.app/','_blank')
@@ -32,7 +32,8 @@ const project = reactive({
     },
 
     projectSix(){
-        window.open('https://github.com/mdarmanbd/rick-n-morty','_blank')
+        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank')
+        
     },
 
     projectSeven(){
