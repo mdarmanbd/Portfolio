@@ -15,39 +15,31 @@ const project = reactive({
 
     projectOne(){
         window.open('https://dashing-khapse-e9dbe5.netlify.app/','_blank')
-       
     },
     projectTwo(){
-        window.open('https://expensetrackermd.netlify.app/','_blank')
+        window.open('https://customer-management-md.netlify.app/', '_blank')
     },
     projectThree(){
-        window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
+        window.open('https://expensetrackermd.netlify.app/','_blank')
     },
     projectFour(){
         window.open('https://kidslandbd.netlify.app/','_blank')
     },
-
     projectFive(){
-        window.open('https://cosmic-cactus-88c529.netlify.app/','_blank')
+        window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
     },
-
     projectSix(){
-        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank')
-        
+        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank') 
     },
-
     projectSeven(){
         window.open('https://mdarmanbd.github.io/e-commerce-shoes-/','_blank')
     },
-
     projectEight(){
-        window.open('https://mdarmanbd.github.io/e-commerce_furniture_projec/','_blank')
+        window.open('https://cosmic-cactus-88c529.netlify.app/','_blank')
     },
-
     projectNine(){  
         window.open('https://mdarmanbd.github.io/e-commerce_fashion_project/#','_blank')
     },
-
     closeProjectButton(){
         this.opacityActive = false
         this.firstProject = false

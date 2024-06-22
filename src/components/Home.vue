@@ -159,7 +159,7 @@ const toggleDark = useToggle(isDark)
 /* fixed color block */
     .color-block{
         /* background-color: rgb(216, 169, 27); */
-        background-color: #5C8374;
+        background-color: #ffb400;
         position: fixed;
         height: 200%;
         width: 100%;
