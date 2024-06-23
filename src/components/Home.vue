@@ -62,8 +62,7 @@ const toggleDark = useToggle(isDark)
                             <div class="lg:w-3/4 xl:w-3/4 lg:m-auto xl:m-auto lg:text-center xl:text-center py-1 sm:py-1 md:py-1 lg:py-0 xl:py-0">
                                 <h2 class="  dark:text-white text-mideNightTeal flex justify-center text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-5xl font-poppins font-bold uppercase pb-1">
                                     <span class="relative before:absolute before:content-[''] before:w-10 before:h-1 before:top-4 before:left-[-50px] before:bg-yellow-500 hidden  xl:flex ">
-                                        <!-- <img class="mr-1" src="../assets/underLine.svg"> -->
-                                        <!-- <p class="w-12">-</p> -->
+                                       
                                     </span>
                                     i'm arman hossain.
                                 </h2>
