@@ -29,7 +29,7 @@ const project = reactive({
         window.open('https://rococo-salmiakki-c43fe6.netlify.app/','_blank')
     },
     projectSix(){
-        window.open('https://tangerine-quokka-74fb16.netlify.app/','_blank') 
+        window.open('https://dashboard-sh24.netlify.app/', '_blank')
     },
     projectSeven(){
         window.open('https://mdarmanbd.github.io/e-commerce-shoes-/','_blank')
