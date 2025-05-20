@@ -19,7 +19,7 @@
         <div class="w-full ">
         <div :class="[project.opacityActive ? 'opacity-5 , pointer-events-none ' : 'opacity-100']" class=" w-full sm:w-full md:w-full lg:w-3/5 xl:w-3/4  m-auto">
           <div class="grid grid-cols-12 gap-5 pb-28 sm:pb-28 md:pb-24 lg:pb-12 xl:pb-12 px-3 sm:px-3 py-5 sm:py-5 ">
-            <div @click="project.projectOne" class="relative overflow-hidden cursor-pointer col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
+            <!-- <div @click="project.projectOne" class="relative overflow-hidden cursor-pointer col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
               <div class="h-full bg-white rounded-lg">
                 <div class="grid place-items-center h-[250px] sm:h-[250px] mg:h-[250px] lg:h-[180px] xl:h-[180px]">
                   <h3 class="text-center text-2xl font-poppins font-bold text-mideNightTeal">E-commerce</h3>
@@ -30,20 +30,8 @@
                   <p class="z-10 text-white font-poppins font-bold text-xl text-center"> Vue.js , Tailwind css</p>
                 </div>
               </div>
-            </div>
-            <!---second project-->
-            <div @click="project.projectTwo" class="relative overflow-hidden cursor-pointer col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
-              <div class="h-full bg-white rounded-lg">
-                <div class="grid place-items-center h-[250px] sm:h-[250px] mg:h-[250px] lg:h-[180px] xl:h-[180px]">
-                  <h3 class="text-center text-2xl font-poppins font-bold text-mideNightTeal">Customer management</h3>
-                </div>
-              </div>
-              <div class="absolute bg-amber rounded-lg top-0 left-0 w-full h-full opacity-0 hover:opacity-100 duration-300">
-                <div class=" absolute top-[40%] left-0 w-full h-full">
-                  <p class="z-10 text-white font-poppins font-bold text-xl text-center">Vue.js, Tailwind css</p>
-                </div>
-              </div>
-            </div>
+            </div> -->
+            
             <!---third project-->
             <div @click="project.projectThree" class="relative overflow-hidden cursor-pointer   col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
               <div class="h-full bg-white rounded-lg">
@@ -57,6 +45,21 @@
                 </div>
               </div>
             </div>
+            
+            <!---second project-->
+            <div @click="project.projectTwo" class="relative overflow-hidden cursor-pointer col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
+              <div class="h-full bg-white rounded-lg">
+                <div class="grid place-items-center h-[250px] sm:h-[250px] mg:h-[250px] lg:h-[180px] xl:h-[180px]">
+                  <h3 class="text-center text-2xl font-poppins font-bold text-mideNightTeal">Customer management</h3>
+                </div>
+              </div>
+              <div class="absolute bg-amber rounded-lg top-0 left-0 w-full h-full opacity-0 hover:opacity-100 duration-300">
+                <div class=" absolute top-[40%] left-0 w-full h-full">
+                  <p class="z-10 text-white font-poppins font-bold text-xl text-center">Vue.js, Tailwind css</p>
+                </div>
+              </div>
+            </div>
+
             <!---forth project-->
             <div @click="project.projectFour" class="relative overflow-hidden cursor-pointer   col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-4 w-full sm:w-full md:w-full lg:w-full xl:w-full xl:h-5/5 xl:rounded-lg mx-auto">
               <div class="h-full bg-white rounded-lg">
