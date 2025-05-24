@@ -54,6 +54,7 @@ const store = reactive({
     },
     clickedDownload(){
         // window.open('https://drive.google.com/file/d/1WNaAMiA7c8r3EwdiBWJKfkkh7Way5t2R/view?usp=sharing','_blank')
+        // https://drive.google.com/file/d/1XgvfX4vifQTLdzF5XUfLa6cDAnaBiKWt/view?usp=sharing
        window.open('https://drive.google.com/file/d/1XgvfX4vifQTLdzF5XUfLa6cDAnaBiKWt/view?usp=sharing','_blank')
     },
     
